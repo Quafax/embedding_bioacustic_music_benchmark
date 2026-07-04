@@ -75,7 +75,7 @@ def command_encoders(_: argparse.Namespace) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="biobench", description="Frozen embedding benchmark for audio transfer.")
+    parser = argparse.ArgumentParser(prog="biobench", description="Embedding benchmark for MERT and muq.")
     sub = parser.add_subparsers(dest="command", required=True)
 
     validate = sub.add_parser("manifest", help="Manifest tools")

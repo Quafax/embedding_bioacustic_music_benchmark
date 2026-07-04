@@ -5,9 +5,10 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "audio-transfer-benchmark"
 version = "0.1.0"
-description = "Frozen-embedding transfer benchmark for music and bioacoustic audio encoders."
+description = "Embedding tests with mert and muq with perch2.0 as a benchmark. BEANS test"
 readme = "README.md"
-requires-python = ">=3.10,<3.13"
+requires-python = ">=3.12,<3.13"
+
 dependencies = [
   "numpy>=1.26",
   "pandas>=2.1",
@@ -35,4 +36,4 @@ testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py312"
