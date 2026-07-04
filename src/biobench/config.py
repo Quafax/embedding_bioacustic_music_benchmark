@@ -1,6 +1,7 @@
 import yaml
 from pathlib import Path
 from dataclasses import dataclass
+from typing import Any
 
 #Here some Error definitions for clarity
 class ConfigError(ValueError):
@@ -19,3 +20,17 @@ class RunConfig:
 @dataclass(frozen=True)
 class DataConfig:
     manifest: Path
+
+
+@dataclass(frozen=True)
+class ProtocolConfig:
+    kind: str
+    options: dict[str, Any]
+
+
+@dataclass(frozen=True)
+class ExperimentConfig:
+    run: RunConfig
+    data: DataConfig
+    encoder: str
+    protocol: ProtocolConfig
