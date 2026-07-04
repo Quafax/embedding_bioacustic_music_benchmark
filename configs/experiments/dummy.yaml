@@ -1,9 +1,9 @@
 run:
-  name: change_me
+  name: dummy
   seed: 42
 
 data:
-  manifest: data/manifests/change_me.csv
+  manifest: data/manifests/dummy.csv
 
 encoder:
   name: dummy
