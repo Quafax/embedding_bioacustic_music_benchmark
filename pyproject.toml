@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio-transfer-benchmark"
+version = "0.1.0"
+description = "Frozen-embedding transfer benchmark for music and bioacoustic audio encoders."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "PyYAML>=6.0.1",
+  "scikit-learn>=1.4",
+  "soundfile>=0.12",
+  "torch>=2.2",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+mert = ["transformers>=4.40"]
+muq = ["muq"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+biobench = "biobench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

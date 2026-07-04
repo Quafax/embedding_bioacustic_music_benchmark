@@ -1,0 +1,13 @@
+run:
+  name: watkins_mert_fewshot
+  seed: 42
+
+data:
+  manifest: data/manifests/watkins.csv
+
+encoder: mert_95m
+
+protocol:
+  kind: fewshot_prototype
+  shots: [1, 5, 10, 25, 100]
+  repeats: 10

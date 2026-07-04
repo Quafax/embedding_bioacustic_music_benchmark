@@ -1,0 +1,4 @@
+clip_id,audio_path,split,task,labels,recording_id,start_s,end_s,source_id,notes
+dcase_train_0001,data/raw/dcase/audio_0001.wav,train,multilabel,bird;mammal,site_001,,,orig_0001,replace with official labels
+dcase_val_0001,data/raw/dcase/audio_0002.wav,val,multilabel,bird,site_002,,,orig_0002,replace with official labels
+dcase_test_0001,data/raw/dcase/audio_0003.wav,test,multilabel,mammal,site_003,,,orig_0003,replace with official labels

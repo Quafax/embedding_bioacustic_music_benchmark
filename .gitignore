@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Private/local data and generated artifacts
+data/raw/**
+!data/raw/.gitkeep
+data/prepared/**
+!data/prepared/.gitkeep
+artifacts/**
+!artifacts/.gitkeep
+
+# Model weights and accidental large files
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.tflite
+*.onnx
+*.npz
+*.npy
+*.parquet
+*.egg-info/

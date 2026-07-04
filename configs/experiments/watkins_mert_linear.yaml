@@ -1,0 +1,14 @@
+run:
+  name: watkins_mert_linear
+  seed: 42
+
+data:
+  manifest: data/manifests/watkins.csv
+
+encoder: mert_95m
+
+protocol:
+  kind: linear_probe
+  c_values: [0.01, 0.1, 1.0, 10.0, 100.0]
+  threshold_values: [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+  max_iter: 5000
